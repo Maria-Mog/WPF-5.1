@@ -1,0 +1,63 @@
+﻿<Window x:Class="WPF_5._1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_5._1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Padding="6" Background="#FFF0AFED" FontSize="14" FontWeight="Bold" >
+            <MenuItem Header="_Главное меню" BorderBrush="#FF39063C" Background="#FFE6AAE3" >
+                <MenuItem Header="_Открыть" Click="MenuItem_Click"/>
+                <MenuItem Header="_Сохранить" Click="MenuItem_Click_1"/>
+                <Separator/>
+                <MenuItem Header="_Выход" Click="MenuItem_Click_2"/>                
+            </MenuItem>            
+        </Menu>
+        <ToolBarTray Grid.Row="1" Background="#FFB9CBDE" >
+            <ToolBar Margin="5" Padding="5">
+                <TextBlock Text="Цвет кисти  ">
+                   <Button x:Name="red" BorderBrush="#FFDE1D1D" Width="15" Height="15" Background="#FFF30D0D" Click="red_Click"/> 
+                   <Button x:Name="green" BorderBrush="#FF19E410" Width="15" Height="15" Background="#FF2CF30D" Click="green_Click"/>                    
+                   <Button x:Name="blue" BorderBrush="#FF26659B" Width="15" Height="15" Background="#FF2354BD" Click="blue_Click"/> 
+                   <Button x:Name="black" BorderBrush="#FF151617" Width="15" Height="15" Background="#FF141415" Click="black_Click"/> 
+                </TextBlock>
+            </ToolBar>
+            <ToolBar Margin="5" Padding="5">
+            <TextBlock Text="Цвет фона  ">
+                   <Button x:Name="red1" BorderBrush="#FFDE1D1D" Width="15" Height="15" Background="#FFF30D0D" Click="red1_Click"/> 
+                   <Button x:Name="green1" BorderBrush="#FF19E410" Width="15" Height="15" Background="#FF2CF30D" Click="green1_Click"/>                    
+                   <Button x:Name="blue1" BorderBrush="#FF26659B" Width="15" Height="15" Background="#FF2354BD" Click="blue1_Click"/> 
+                   <Button x:Name="black1" BorderBrush="#FF03050A" Width="15" Height="15" Background="#FF03050A" Click="black1_Click"/> 
+                   <Button x:Name="auto1" BorderBrush="#FFE4E9F5" Width="15" Height="15" Background="#FFE4E9F5" Click="auto1_Click"/>                    
+                   
+                </TextBlock>
+            </ToolBar>
+            <ToolBar Margin="5" Padding="5" >
+                <Button x:Name="wash" Margin="3" Padding="3" Click="wash_Click_1">
+                    <Image Source="Data/12.png"/>
+
+                </Button>  
+                <Button x:Name="brush" Margin="3" Padding="3" Click="brush_Click">
+                    <Image Source="Data/13.png"/>
+
+                </Button> 
+                <Button x:Name ="fat" Click="fat_Click">
+                        <Image Source ="Data/14.png"/>
+                    </Button>
+            </ToolBar >
+            
+
+        </ToolBarTray>
+        <InkCanvas x:Name="inkCanvas" Grid.Row="2" EditingMode="Ink" ClipToBounds="True">
+            
+        </InkCanvas>
+
+    </Grid>
+</Window>
